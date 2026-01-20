@@ -38,7 +38,7 @@ const Footer = () => {
                 <i className="fa-brands fa-youtube text-xl"></i>
               </a>
               <a
-                href="https://www.facebook.com/mdshahariarhafizofficial"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-black py-2 px-3 rounded hover:text-primary transition"
