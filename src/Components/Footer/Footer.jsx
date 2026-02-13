@@ -3,7 +3,7 @@ import logo from "../../assets/images.png";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-neutral-900 text-white overflow-hidden relative">
+    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-neutral-900 text-white overflow-hidden relative py-12">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
@@ -12,7 +12,7 @@ const Footer = () => {
             <img src={logo} className="w-40 h-10" alt="CourtReserve" />
             <p className="text-sm text-gray-300">
   Smart sports club management. Book courts, manage events, 
-  handle payments — all in one place. Play smarter, win bigger.
+  handle payments, all in one place. Play smarter, win bigger.
 </p>
 
             <div className="flex gap-2">
