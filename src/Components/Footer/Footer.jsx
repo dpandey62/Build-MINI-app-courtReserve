@@ -3,7 +3,7 @@ import logo from "../../assets/images.png";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-900 text-white py-12">
+    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-neutral-900 text-white overflow-hidden relative">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
@@ -11,12 +11,14 @@ const Footer = () => {
           <div className="space-y-4">
             <img src={logo} className="w-40 h-10" alt="CourtReserve" />
             <p className="text-sm text-gray-300">
-              Smart sports club management system.
-            </p>
+  Smart sports club management. Book courts, manage events, 
+  handle payments — all in one place. Play smarter, win bigger.
+</p>
+
             <div className="flex gap-2">
-              <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
+              {/* <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
                 <i className="fa-brands fa-x-twitter text-lg"></i>
-              </a>
+              </a> */}
               <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
                 <i className="fa-brands fa-youtube text-lg"></i>
               </a>
