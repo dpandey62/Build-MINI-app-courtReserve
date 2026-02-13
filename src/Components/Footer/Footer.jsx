@@ -5,20 +5,16 @@ const Footer = () => {
   return (
     <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-neutral-900 text-white overflow-hidden relative py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"> {/* Changed to 5 columns */}
           
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:col-span-2"> {/* Takes 2 columns */}
             <img src={logo} className="w-40 h-10" alt="CourtReserve" />
             <p className="text-sm text-gray-300">
-  Smart sports club management. Book courts, manage events, 
-  handle payments, all in one place. Play smarter, win bigger.
-</p>
-
+              Smart sports club management. Book courts, manage events, 
+              handle payments, all in one place. Play smarter, win bigger.
+            </p>
             <div className="flex gap-2">
-              {/* <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
-                <i className="fa-brands fa-x-twitter text-lg"></i>
-              </a> */}
               <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
                 <i className="fa-brands fa-youtube text-lg"></i>
               </a>
@@ -51,6 +47,16 @@ const Footer = () => {
               <li><a href="#" className="text-gray-300 hover:text-white">FAQ</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white">Support</a></li>
               <li><a href="#" className="text-gray-300 hover:text-white">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Legal - NEW SECTION */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-white">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#" className="text-gray-300 hover:text-white">Terms of Use</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-white">Cookie Policy</a></li>
             </ul>
           </div>
 
