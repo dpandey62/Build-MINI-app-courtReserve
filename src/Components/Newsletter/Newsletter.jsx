@@ -1,36 +1,54 @@
 export default function Newsletter() {
   return (
-    <section className="w-full bg-primary py-16">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section className="w-full bg-gradient-to-r from-primary via-blue-600 to-indigo-700 py-20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-3000"></div>
+      </div>
+      
+      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+        {/* Icon */}
+        <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl">
+          <i className="fa-solid fa-envelope text-3xl text-white"></i>
+        </div>
+
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-4">
-          Stay Updated with <span className="text-white">CourtReserve</span>
+        <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-6 leading-tight drop-shadow-lg">
+          Get CourtReserve Updates
         </h2>
-        <p className="text-black/80 mb-8 max-w-2xl mx-auto text-lg">
-          Subscribe to our newsletter and never miss updates about new courts,
-          special offers, and events from our Sports Club.
+        
+        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+          Never miss new courts, exclusive offers & tournament alerts
         </p>
 
-        {/* Input Form */}
-        <form className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+        {/* Form */}
+        <form className="flex flex-col lg:flex-row items-stretch gap-4 max-w-2xl mx-auto bg-white/10 backdrop-blur-xl rounded-3xl p-1 shadow-2xl border border-white/20">
           <input
             type="email"
-            placeholder="Enter your email address"
-            className="w-full sm:flex-1 px-5 py-3 rounded-2xl border border-gray-700 focus:outline-none focus:ring-2 focus:ring-black text-black"
+            placeholder="your.email@courtreserve.com"
+            className="flex-1 px-6 py-5 bg-white/80 text-gray-900 placeholder-gray-500 rounded-2xl focus:outline-none focus:ring-4 focus:ring-white/50 font-medium text-lg border-0 shadow-lg"
             required
           />
           <button
             type="submit"
-            className="px-8 py-3 rounded-2xl bg-black text-[#e4a622ff] font-semibold shadow-lg hover:bg-gray-900 transition-all"
+            className="px-10 py-5 bg-gradient-to-r from-white to-gray-100 text-primary font-black text-lg rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 hover:from-gray-50 transition-all duration-300 border-0"
           >
-            Subscribe
+            Join Now
           </button>
         </form>
 
-        {/* Extra Note */}
-        <p className="text-sm text-black/70 mt-6">
-          We respect your privacy. No spam, only updates.
-        </p>
+        {/* Trust Badge */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 text-sm text-white/80">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+              <i className="fa-solid fa-lock text-xs text-green-900"></i>
+            </div>
+            <span>100% Privacy Protected</span>
+          </div>
+          <span>•</span>
+          <span>10K+ Active Members</span>
+        </div>
       </div>
     </section>
   );
