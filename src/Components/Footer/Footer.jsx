@@ -1,83 +1,164 @@
+// import { useContext } from 'react';
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images.png";
 
+import AuthContext from '../../Context/AuthContext';
+
 const Footer = () => {
+  // const { user } = useContext(AuthContext);
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-indigo-900 to-neutral-900 text-white overflow-hidden relative py-12">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"> {/* Changed to 5 columns */}
-          
-          {/* Brand */}
-          <div className="space-y-4 lg:col-span-2"> {/* Takes 2 columns */}
-            <img src={logo} className="w-40 h-10" alt="CourtReserve" />
-            <p className="text-sm text-gray-300">
-              Smart sports club management. Book courts, manage events, 
-              handle payments, all in one place. Play smarter, win bigger.
-            </p>
-            <div className="flex gap-2">
-              <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
-                <i className="fa-brands fa-youtube text-lg"></i>
-              </a>
-              <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
-                <i className="fa-brands fa-facebook text-lg"></i>
-              </a>
+    <div className="bg-neutral text-white">
+      <div className="max-w-[1500px] mx-auto px-6 lg:px-0 py-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10">
+        {/* Brand Description & Social Media */}
+        <aside className="space-y-5">
+          <img src={logo} className="w-40" alt="Sportiva Logo" />
+          <p className="text-sm leading-6 text-gray-300">
+            <strong>CourtReserve</strong> is a smart sports club management system
+            built for modern clubs. Handle registrations, court bookings,
+            events, and payments all in one place — Play Smarter, Manage Better.
+          </p>
+          <div className="mt-6">
+            <h3 className="text-primary text-lg font-semibold mb-2">Social Media</h3>
+            <div className="flex gap-3">
               <a href="#" className="w-10 h-10 bg-white text-gray-900 rounded-lg flex items-center justify-center hover:bg-gray-100">
                 <i className="fa-brands fa-linkedin text-lg"></i>
               </a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black py-2 px-3 rounded hover:text-primary transition"
+              >
+                <i className="fa-brands fa-youtube text-xl"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-black py-2 px-3 rounded hover:text-primary transition"
+              >
+                <i className="fa-brands fa-facebook text-xl"></i>
+              </a>
             </div>
           </div>
+        </aside>
 
-          {/* Quick Links */}
+        {/* Quick Links */}
+        <div>
+          <h2 className="text-primary text-xl font-semibold mb-4">Quick Links</h2>
+          <ul className='space-y-4'>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary border-b-2 rounded-none font-bold"
+                    : "font-medium text-white hover:text-primary"
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/courts"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary border-b-2 rounded-none font-bold"
+                    : "font-medium text-white hover:text-primary"
+                }
+              >
+                Courts
+              </NavLink>
+            </li>   
+            <li>
+              <NavLink
+                to="/faq"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary border-b-2 rounded-none font-bold"
+                    : "font-medium text-white hover:text-primary"
+                }
+              >
+                FAQ
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact-us"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary border-b-2 rounded-none font-bold"
+                    : "font-medium text-white hover:text-primary"
+                }
+              >
+                Contact Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/support"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary border-b-2 rounded-none font-bold"
+                    : "font-medium text-white hover:text-primary"
+                }
+              >
+                Support
+              </NavLink>
+            </li>                     
+          </ul>
+        </div>
+
+        {/* Resources */}
+        <div>
+          <h2 className="text-primary text-xl font-semibold mb-4">Resources</h2>
+          <ul className="space-y-3">
+            <li><a href="/dashboard" className="hover:text-primary transition">Dashboard</a></li>
+            <li><a href="/faq" className="hover:text-primary transition">Faq</a></li>
+            <li><a href="/support" className="hover:text-primary transition">Support</a></li>
+            <li><a href="/contact-us" className="hover:text-primary transition">Contact</a></li>
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h2 className="text-primary text-xl font-semibold mb-4">Legal</h2>
+          <ul className="space-y-3">
+            <li><a href="/terms-of-use" className="hover:text-primary transition">Terms of Use</a></li>
+            <li><a href="/privacy-policy" className="hover:text-primary transition">Privacy Policy</a></li>
+            <li><a href="/cookie-policy" className="hover:text-primary transition">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+            {/* Contact Info */}
+        <div>
           <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li><NavLink to="/" className="text-gray-300 hover:text-white">Home</NavLink></li>
-              <li><NavLink to="/courts" className="text-gray-300 hover:text-white">Courts</NavLink></li>
-              <li><NavLink to="/faq" className="text-gray-300 hover:text-white">FAQ</NavLink></li>
-              <li><NavLink to="/contact-us" className="text-gray-300 hover:text-white">Contact</NavLink></li>
-              <li><NavLink to="/support" className="text-gray-300 hover:text-white">Support</NavLink></li>
+            <h2 className="text-primary text-xl font-semibold mb-4">Contact</h2>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>Email: <a href="mailto:support@sportiva.com" className="hover:text-primary">support@courtreserve.com</a></li>
+              <li>Phone: <a href="tel:+880123456789" className="hover:text-primary">+91 6123456789</a></li>
+              <li>Address: Jodhpur , Rajasthan, India - 342001</li>
             </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-white">Dashboard</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">FAQ</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Support</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Contact</a></li>
-            </ul>
-          </div>
-
-          {/* Legal - NEW SECTION */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Legal</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-gray-300 hover:text-white">Terms of Use</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white">Cookie Policy</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-bold mb-4 text-white">Contact</h3>
-            <div className="space-y-2 text-sm text-gray-300">
-              <p>support@courtreserve.com</p>
-              <p>+91 6123456789</p>
-              <p>Jodhpur, Rajasthan<br/>India - 342001</p>
-            </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gray-800 pt-6 mt-8 text-center text-sm text-gray-400">
+      </div>
+      
+
+      {/* Bottom Footer */}
+      <div className="bg-black py-5">
+        <div className="max-w-[1500px] mx-auto flex flex-col md:flex-row items-center justify-between px-6 lg:px-0 text-sm text-gray-400">
+          <p><span className="text-primary font-bold text-lg">CourtReserve</span> — Manage. Play. Excel.</p>
           <p>© 2026 CourtReserve. All rights reserved.</p>
         </div>
       </div>
     </div>
   );
 };
+export default  Footer;
 
-export default Footer;
+
+
+
